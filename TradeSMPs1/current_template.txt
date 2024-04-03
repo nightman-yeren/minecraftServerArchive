@@ -1,0 +1,5 @@
+# This file will allow the PebbleHost Installer to detect which modpack is currently installed
+# And allow you to update the modpack by re-running the preinstall
+
+CURRENT_TEMPLATE=forge-121
+CURRENT_VERSION=""

@@ -1,0 +1,204 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 2024-02-10 03:48:23
+Description: Exception ticking world
+
+java.lang.IllegalArgumentException: Cannot set property IntegerProperty{name=layers, clazz=class java.lang.Integer, values=[0, 1, 2, 3, 4, 5, 6, 7, 8]} to -1 on Block{immersive_weathering:biomesoplenty/maple_leaf_pile}, it is not an allowed value
+	at net.minecraft.world.level.block.state.StateHolder.m_61124_(StateHolder.java:130) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,re:computing_frames,re:classloading,pl:mixin:APP:lithium.mixins.json:alloc.blockstate.StateMixin,pl:mixin:A}
+	at com.ordana.immersive_weathering.blocks.LeafPileBlock.m_213898_(LeafPileBlock.java:249) ~[immersive_weathering-1.20.1-2.0.0-forge.jar%23211!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.m_222972_(BlockBehaviour.java:762) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,re:classloading,pl:mixin:APP:lithium.mixins.json:ai.pathing.AbstractBlockStateMixin,pl:mixin:APP:lithium.mixins.json:util.block_tracking.AbstractBlockStateMixin,pl:mixin:APP:tact.mixins.json:BlockStateBaseAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.redirect$zbb000$redirectBlockStateTick(ServerLevel.java:1658) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8714_(ServerLevel.java:481) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerChunkCache.m_8490_(ServerChunkCache.java:362) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_ticking.ServerChunkManagerMixin,pl:mixin:APP:lithium.mixins.json:world.chunk_access.ServerChunkManagerMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerChunkCache.m_201698_(ServerChunkCache.java:312) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_ticking.ServerChunkManagerMixin,pl:mixin:APP:lithium.mixins.json:world.chunk_access.ServerChunkManagerMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:305) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:893) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:283) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:814) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:661) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {re:mixin}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mods: 
+	Radium (radium), Version: 0.12.2+git.5f80f74
+		Issue tracker URL: https://github.com/Reforged-Hub/radium-upstream/issues
+		Mixin class: me.jellysquid.mods.lithium.mixin.alloc.chunk_random.ServerWorldMixin
+		Target: net.minecraft.server.level.ServerLevel
+		at TRANSFORMER/minecraft@1.20.1/net.minecraft.server.level.ServerLevel.redirect$zbb000$redirectBlockStateTick(ServerLevel.java:1658)
+
+	Immersive Weathering (immersive_weathering), Version: 1.20.1-2.0.0
+		at TRANSFORMER/immersive_weathering@1.20.1-2.0.0/com.ordana.immersive_weathering.blocks.LeafPileBlock.m_213898_(LeafPileBlock.java:249)
+Stacktrace:
+	at net.minecraft.world.level.block.state.StateHolder.m_61124_(StateHolder.java:130) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,re:computing_frames,re:classloading,pl:mixin:APP:lithium.mixins.json:alloc.blockstate.StateMixin,pl:mixin:A}
+	at com.ordana.immersive_weathering.blocks.LeafPileBlock.m_213898_(LeafPileBlock.java:249) ~[immersive_weathering-1.20.1-2.0.0-forge.jar%23211!/:?] {re:classloading}
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.m_222972_(BlockBehaviour.java:762) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,re:classloading,pl:mixin:APP:lithium.mixins.json:ai.pathing.AbstractBlockStateMixin,pl:mixin:APP:lithium.mixins.json:util.block_tracking.AbstractBlockStateMixin,pl:mixin:APP:tact.mixins.json:BlockStateBaseAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.redirect$zbb000$redirectBlockStateTick(ServerLevel.java:1658) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8714_(ServerLevel.java:481) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+	at net.minecraft.server.level.ServerChunkCache.m_8490_(ServerChunkCache.java:362) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_ticking.ServerChunkManagerMixin,pl:mixin:APP:lithium.mixins.json:world.chunk_access.ServerChunkManagerMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerChunkCache.m_201698_(ServerChunkCache.java:312) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_ticking.ServerChunkManagerMixin,pl:mixin:APP:lithium.mixins.json:world.chunk_access.ServerChunkManagerMixin,pl:mixin:A}
+	at net.minecraft.server.level.ServerLevel.m_8793_(ServerLevel.java:305) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B,pl:mixin:APP:lithium.mixins.json:alloc.chunk_random.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:chunk.entity_class_groups.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:entity.inactive_navigations.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:profiler.ServerWorldMixin,pl:mixin:APP:lithium.mixins.json:util.entity_movement_tracking.ServerWorldAccessor,pl:mixin:APP:lithium.mixins.json:world.block_entity_ticking.sleeping.ServerWorldMixin,pl:mixin:APP:citadel.mixins.json:ServerLevelMixin,pl:mixin:APP:immersive_weathering-common.mixins.json:ServerLevelMixin,pl:mixin:APP:supplementaries-common.mixins.json:ServerLevelMixin,pl:mixin:APP:create.mixins.json:accessor.ServerLevelAccessor,pl:mixin:A}
+-- Affected level --
+Details:
+	All players: 3 total; [ServerPlayer['nightmanYeren'/40737, l='ServerLevel[world]', x=-599.96, y=82.00, z=-748.03], ServerPlayer['YuanXiao1'/2157, l='ServerLevel[world]', x=-303.37, y=93.00, z=-527.67], ServerPlayer['Enviiixity'/1477, l='ServerLevel[world]', x=-502.42, y=84.00, z=-579.30]]
+	Chunk stats: 11794
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (-192,78,-96), Section: (at 0,14,0 in -12,4,-6; chunk contains blocks -192,-64,-96 to -177,319,-81), Region: (-1,-1; contains chunks -32,-32 to -1,-1, blocks -512,-64,-512 to -1,319,-1)
+	Level time: 102331 game time, 150354 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 10854 (now: false), thunder time: 35383 (now: false)
+	Known server brands: forge
+	Removed feature flags: 
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.m_5703_(MinecraftServer.java:893) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.dedicated.DedicatedServer.m_5703_(DedicatedServer.java:283) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:computing_frames,pl:accesstransformer:B,re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.m_5705_(MinecraftServer.java:814) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_130011_(MinecraftServer.java:661) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at net.minecraft.server.MinecraftServer.m_206580_(MinecraftServer.java:251) ~[server-1.20.1-20230612.114412-srg.jar%23241!/:?] {re:mixin,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,re:classloading,pl:accesstransformer:B,xf:fml:xaeroworldmap:xaero_wm_minecraftserver,xf:fml:xaerominimap:xaero_minecraftserver,pl:mixin:APP:citadel.mixins.json:MinecraftServerMixin,pl:mixin:APP:balm.mixins.json:MinecraftServerMixin,pl:mixin:A}
+	at java.lang.Thread.run(Thread.java:833) ~[?:?] {re:mixin}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.1
+	Minecraft Version ID: 1.20.1
+	Operating System: Linux (amd64) version 4.18.0-348.2.1.el8_5.x86_64
+	Java Version: 17.0.7, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 2826712288 bytes (2695 MiB) / 6656360448 bytes (6348 MiB) up to 7340032000 bytes (7000 MiB)
+	CPUs: 4
+	Processor Vendor: GenuineIntel
+	Processor Name: Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+	Identifier: Intel64 Family 6 Model 158 Stepping 9
+	Microarchitecture: Kaby Lake
+	Frequency (GHz): 4.20
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: unknown
+	Graphics card #0 vendor: unknown
+	Graphics card #0 VRAM (MB): 0.00
+	Graphics card #0 deviceId: unknown
+	Graphics card #0 versionInfo: unknown
+	Virtual memory max (MB): 64185.16
+	Virtual memory used (MB): 58972.45
+	Swap memory total (MB): 32255.99
+	Swap memory used (MB): 9406.69
+	JVM Flags: 5 total; -Xmx7000M -Xms128M -XX:MaxDirectMemorySize=256M -XX:MaxMetaspaceSize=1024M -XX:MaxRAMPercentage=90.0
+	Server Running: true
+	Player Count: 3 / 8; [ServerPlayer['nightmanYeren'/40737, l='ServerLevel[world]', x=-599.96, y=82.00, z=-748.03], ServerPlayer['YuanXiao1'/2157, l='ServerLevel[world]', x=-303.37, y=93.00, z=-527.67], ServerPlayer['Enviiixity'/1477, l='ServerLevel[world]', x=-502.42, y=84.00, z=-579.30]]
+	Data Packs: vanilla, mod:flansmod (incompatible), mod:create_things_and_misc, mod:moneyforeveryone, mod:createdeco (incompatible), mod:playeranimator (incompatible), mod:goblintraders (incompatible), mod:immersive_aircraft (incompatible), mod:sophisticatedcore (incompatible), mod:createloveandwar, mod:immersive_weathering (incompatible), mod:create_jetpack (incompatible), mod:waystones, mod:clumps (incompatible), mod:xaeroworldmap, mod:controlling (incompatible), mod:comforts (incompatible), mod:citadel (incompatible), mod:alexsmobs (incompatible), mod:naturescompass, mod:mixinextras (incompatible), mod:bookshelf, mod:create_confectionery, mod:sophisticatedbackpacks (incompatible), mod:create_dragon_lib (incompatible), mod:iceandfire, mod:railways (incompatible), mod:balm, mod:terralith, mod:immersive_armors (incompatible), mod:cloth_config (incompatible), mod:sound_physics_remastered (incompatible), mod:forge, mod:supplementaries, mod:refinedstorage, mod:tectonic, mod:farmersdelight, mod:alexscaves, mod:tact, mod:enchdesc (incompatible), mod:terrablender, mod:moonlight (incompatible), mod:ambientsounds, mod:bettercombat (incompatible), mod:cataclysmiccombat, mod:biomesoplenty (incompatible), mod:mixinsquared (incompatible), mod:simpleshops, mod:creativecore, mod:spectrelib (incompatible), mod:spark (incompatible), mod:create_sabers, mod:kotlinforforge (incompatible), mod:cataclysm (incompatible), mod:curios (incompatible), mod:flywheel, mod:create, mod:create_central_kitchen (incompatible), mod:creategoggles (incompatible), mod:xaerominimap, mod:create_sa, mod:polymorph (incompatible), mod:ftbultimine (incompatible), mod:architectury (incompatible), mod:ftblibrary (incompatible), mod:simplyswords (incompatible), mod:appleskin (incompatible), mod:alexsdelight, mod:flightlib (incompatible), mod:framework, mod:refinedstorageaddons, mod:refinedpolymorph, mod:create_enchantment_industry (incompatible), mod:sliceanddice (incompatible), mod:createaddition (incompatible), mod:presencefootsteps (incompatible), Immersive Weathering Generated Pack, Supplementaries Generated Pack, create_central_kitchen:farmersdelight (incompatible), tact/apply_tag_adjustments, tectonic/terratonic (incompatible), mod:corpse, mod:radium
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
+	ModLauncher: 10.0.9+10.0.9+main.dcd20f30
+	ModLauncher launch target: forgeserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		mixin-0.8.5.jar mixin PLUGINSERVICE 
+		eventbus-6.0.5.jar eventbus PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.20.jar slf4jfixer PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.20.jar object_holder_definalize PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.20.jar runtime_enum_extender PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.20.jar capability_token_subclass PLUGINSERVICE 
+		accesstransformers-8.0.4.jar accesstransformer PLUGINSERVICE 
+		fmlloader-1.20.1-47.2.20.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-10.0.9.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-10.0.9.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		minecraft@1.0
+		javafml@null
+		kotlinforforge@4.10.0
+		lowcodefml@null
+	Mod List: 
+		flansmod-1.20.1-0.2.147.jar                       |Flan's Mod                    |flansmod                      |0.0NONE             |DONE      |Manifest: NOSIGNATURE
+		radium-mc1.20.1-0.12.2+git.5f80f74.jar            |Radium                        |radium                        |0.12.2+git.5f80f74  |DONE      |Manifest: NOSIGNATURE
+		create_misc_and_things_ 1.20.1_4.0A.jar           |create: things and misc       |create_things_and_misc        |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		mfe-3.0.0-1.20.1.jar                              |Money for Everyone            |moneyforeveryone              |3.0.0               |DONE      |Manifest: NOSIGNATURE
+		createdeco-2.0.1-1.20.1-forge.jar                 |Create Deco                   |createdeco                    |2.0.1-1.20.1-forge  |DONE      |Manifest: NOSIGNATURE
+		player-animation-lib-forge-1.0.2-rc1+1.20.jar     |Player Animator               |playeranimator                |1.0.2-rc1+1.20      |DONE      |Manifest: NOSIGNATURE
+		goblintraders-forge-1.20.1-1.9.3.jar              |Goblin Traders                |goblintraders                 |1.9.3               |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		immersive_aircraft-0.7.1+1.20.1-forge.jar         |Immersive Aircraft            |immersive_aircraft            |0.7.1+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		sophisticatedcore-1.20.1-0.5.116.537.jar          |Sophisticated Core            |sophisticatedcore             |0.5.116.537         |DONE      |Manifest: NOSIGNATURE
+		createloveandwar-0.1-1.20.1.jar                   |Create: Love and War          |createloveandwar              |0.1-1.20.1          |DONE      |Manifest: NOSIGNATURE
+		immersive_weathering-1.20.1-2.0.0-forge.jar       |Immersive Weathering          |immersive_weathering          |1.20.1-2.0.0        |DONE      |Manifest: NOSIGNATURE
+		create_jetpack-forge-4.2.0.jar                    |Create Jetpack                |create_jetpack                |4.2.0               |DONE      |Manifest: NOSIGNATURE
+		waystones-forge-1.20-14.1.3.jar                   |Waystones                     |waystones                     |14.1.3              |DONE      |Manifest: NOSIGNATURE
+		Clumps-forge-1.20.1-12.0.0.3.jar                  |Clumps                        |clumps                        |12.0.0.3            |DONE      |Manifest: NOSIGNATURE
+		XaerosWorldMap_1.37.8_Forge_1.20.jar              |Xaero's World Map             |xaeroworldmap                 |1.37.8              |DONE      |Manifest: NOSIGNATURE
+		Controlling-forge-1.20.1-12.0.2.jar               |Controlling                   |controlling                   |12.0.2              |DONE      |Manifest: NOSIGNATURE
+		comforts-forge-6.3.5+1.20.1.jar                   |Comforts                      |comforts                      |6.3.5+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		citadel-2.4.9-1.20.1.jar                          |Citadel                       |citadel                       |2.4.9               |DONE      |Manifest: NOSIGNATURE
+		alexsmobs-1.22.7.jar                              |Alex's Mobs                   |alexsmobs                     |1.22.7              |DONE      |Manifest: NOSIGNATURE
+		NaturesCompass-1.20.1-1.11.2-forge.jar            |Nature's Compass              |naturescompass                |1.20.1-1.11.2-forge |DONE      |Manifest: NOSIGNATURE
+		mixinextras-forge-0.2.0.jar                       |MixinExtras                   |mixinextras                   |0.2.0               |DONE      |Manifest: NOSIGNATURE
+		Bookshelf-Forge-1.20.1-20.1.9.jar                 |Bookshelf                     |bookshelf                     |20.1.9              |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		create-confectionery1.20.1_v1.1.0.jar             |Create Confectionery          |create_confectionery          |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		sophisticatedbackpacks-1.20.1-3.19.8.1000.jar     |Sophisticated Backpacks       |sophisticatedbackpacks        |3.19.8.1000         |DONE      |Manifest: NOSIGNATURE
+		create_dragon_lib-1.20.1-1.3.3.jar                |Create: Dragon Lib            |create_dragon_lib             |1.3.3               |DONE      |Manifest: NOSIGNATURE
+		iceandfire-2.1.13-1.20.1-beta-2.jar               |Ice and Fire                  |iceandfire                    |2.1.13-1.20.1+build.|DONE      |Manifest: NOSIGNATURE
+		Steam_Rails-1.5.3+forge-mc1.20.1.jar              |Create: Steam 'n' Rails       |railways                      |1.5.3+forge-mc1.20.1|DONE      |Manifest: NOSIGNATURE
+		balm-forge-1.20.1-7.2.1.jar                       |Balm                          |balm                          |7.2.1               |DONE      |Manifest: NOSIGNATURE
+		Terralith_1.20.4_v2.4.11.jar                      |Terralith                     |terralith                     |2.4.11              |DONE      |Manifest: NOSIGNATURE
+		immersive_armors-1.6.1+1.20.1-forge.jar           |Immersive Armors              |immersive_armors              |1.6.1+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		cloth-config-11.1.118-forge.jar                   |Cloth Config v10 API          |cloth_config                  |11.1.118            |DONE      |Manifest: NOSIGNATURE
+		sound-physics-remastered-forge-1.20.1-1.3.1.jar   |Sound Physics Remastered      |sound_physics_remastered      |1.20.1-1.3.1        |DONE      |Manifest: NOSIGNATURE
+		forge-1.20.1-47.2.20-universal.jar                |Forge                         |forge                         |47.2.20             |DONE      |Manifest: 84:ce:76:e8:45:35:e4:0e:63:86:df:47:59:80:0f:67:6c:c1:5f:6e:5f:4d:b3:54:47:1a:9f:7f:ed:5e:f2:90
+		supplementaries-1.20-2.7.33.jar                   |Supplementaries               |supplementaries               |1.20-2.7.33         |DONE      |Manifest: NOSIGNATURE
+		refinedstorage-1.12.4.jar                         |Refined Storage               |refinedstorage                |1.12.4              |DONE      |Manifest: NOSIGNATURE
+		corpse-1.20.1-1.0.9.jar                           |Corpse                        |corpse                        |1.20.1-1.0.9        |DONE      |Manifest: NOSIGNATURE
+		tectonic-mod-1.19.3-v2.2.jar                      |Tectonic                      |tectonic                      |2.2                 |DONE      |Manifest: NOSIGNATURE
+		server-1.20.1-20230612.114412-srg.jar             |Minecraft                     |minecraft                     |1.20.1              |DONE      |Manifest: NOSIGNATURE
+		FarmersDelight-1.20.1-1.2.4.jar                   |Farmer's Delight              |farmersdelight                |1.20.1-1.2.4        |DONE      |Manifest: NOSIGNATURE
+		alexscaves-1.0.9.jar                              |Alex's Caves                  |alexscaves                    |1.0.9               |DONE      |Manifest: NOSIGNATURE
+		tact-1.0.9+1.20.1.jar                             |TACT                          |tact                          |1.0.9               |DONE      |Manifest: NOSIGNATURE
+		EnchantmentDescriptions-Forge-1.20.1-17.0.13.jar  |EnchantmentDescriptions       |enchdesc                      |17.0.13             |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		TerraBlender-forge-1.20.1-3.0.1.4.jar             |TerraBlender                  |terrablender                  |3.0.1.4             |DONE      |Manifest: NOSIGNATURE
+		moonlight-1.20-2.9.9-forge.jar                    |Moonlight Library             |moonlight                     |1.20-2.9.9          |DONE      |Manifest: NOSIGNATURE
+		AmbientSounds_FORGE_v5.3.8_mc1.20.1.jar           |AmbientSounds                 |ambientsounds                 |5.3.8               |DONE      |Manifest: NOSIGNATURE
+		bettercombat-forge-1.8.4+1.20.1.jar               |Better Combat                 |bettercombat                  |1.8.4+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		cataclysmiccombat-1.2.jar                         |Cataclysmic Combat            |cataclysmiccombat             |1.2                 |DONE      |Manifest: NOSIGNATURE
+		BiomesOPlenty-1.20.1-18.0.0.592.jar               |Biomes O' Plenty              |biomesoplenty                 |18.0.0.592          |DONE      |Manifest: NOSIGNATURE
+		mixinsquared-forge-0.1.1.jar                      |MixinSquared                  |mixinsquared                  |0.1.1               |DONE      |Manifest: NOSIGNATURE
+		simpleshops-1.2.2.jar                             |Simple Shops                  |simpleshops                   |1.2.2               |DONE      |Manifest: NOSIGNATURE
+		CreativeCore_FORGE_v2.11.24_mc1.20.1.jar          |CreativeCore                  |creativecore                  |2.11.24             |DONE      |Manifest: NOSIGNATURE
+		spectrelib-forge-0.13.15+1.20.1.jar               |SpectreLib                    |spectrelib                    |0.13.15+1.20.1      |DONE      |Manifest: NOSIGNATURE
+		spark-1.10.53-forge.jar                           |spark                         |spark                         |1.10.53             |DONE      |Manifest: NOSIGNATURE
+		create_sabers-1.20.1-1.3.0.jar                    |Create Sabers                 |create_sabers                 |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		kffmod-4.10.0.jar                                 |Kotlin For Forge              |kotlinforforge                |4.10.0              |DONE      |Manifest: NOSIGNATURE
+		L_Enders_Cataclysm-1.90 -1.20.1.jar               |Cataclysm Mod                 |cataclysm                     |1.0                 |DONE      |Manifest: NOSIGNATURE
+		curios-forge-5.7.0+1.20.1.jar                     |Curios API                    |curios                        |5.7.0+1.20.1        |DONE      |Manifest: NOSIGNATURE
+		flywheel-forge-1.20.1-0.6.10-7.jar                |Flywheel                      |flywheel                      |0.6.10-7            |DONE      |Manifest: NOSIGNATURE
+		create-1.20.1-0.5.1.f.jar                         |Create                        |create                        |0.5.1.f             |DONE      |Manifest: NOSIGNATURE
+		create_central_kitchen-1.20.1-for-create-0.5.1.f-1|Create: Central Kitchen       |create_central_kitchen        |1.3.9.e             |DONE      |Manifest: NOSIGNATURE
+		creategoggles-1.20.1-0.5.5.f-[FORGE].jar          |Create Goggles                |creategoggles                 |0.5.5.f             |DONE      |Manifest: NOSIGNATURE
+		Xaeros_Minimap_23.9.7_Forge_1.20.jar              |Xaero's Minimap               |xaerominimap                  |23.9.7              |DONE      |Manifest: NOSIGNATURE
+		create-stuff-additions1.20.1_v2.0.4a.jar          |Create Stuff & Additions      |create_sa                     |2.0.4.              |DONE      |Manifest: NOSIGNATURE
+		polymorph-forge-0.49.2+1.20.1.jar                 |Polymorph                     |polymorph                     |0.49.2+1.20.1       |DONE      |Manifest: NOSIGNATURE
+		ftb-ultimine-forge-2001.1.4.jar                   |FTB Ultimine                  |ftbultimine                   |2001.1.4            |DONE      |Manifest: NOSIGNATURE
+		architectury-9.1.13-forge.jar                     |Architectury                  |architectury                  |9.1.13              |DONE      |Manifest: NOSIGNATURE
+		ftb-library-forge-2001.1.5.jar                    |FTB Library                   |ftblibrary                    |2001.1.5            |DONE      |Manifest: NOSIGNATURE
+		simplyswords-forge-1.53.0-1.20.1.jar              |Simply Swords                 |simplyswords                  |1.53.0-1.20.1       |DONE      |Manifest: NOSIGNATURE
+		appleskin-forge-mc1.20.1-2.5.1.jar                |AppleSkin                     |appleskin                     |2.5.1+mc1.20.1      |DONE      |Manifest: NOSIGNATURE
+		alexsdelight-1.5.jar                              |Alex's Delight                |alexsdelight                  |1.5                 |DONE      |Manifest: NOSIGNATURE
+		flightlib-forge-2.0.3.jar                         |Flight Lib                    |flightlib                     |2.0.3               |DONE      |Manifest: NOSIGNATURE
+		framework-forge-1.20.1-0.6.16.jar                 |Framework                     |framework                     |0.6.16              |DONE      |Manifest: 0d:78:5f:44:c0:47:0c:8c:e2:63:a3:04:43:d4:12:7d:b0:7c:35:37:dc:40:b1:c1:98:ec:51:eb:3b:3c:45:99
+		refinedstorageaddons-0.10.0.jar                   |Refined Storage Addons        |refinedstorageaddons          |0.10.0              |DONE      |Manifest: NOSIGNATURE
+		refinedpolymorph-0.1.0-1.20.1.jar                 |Refined Polymorphism          |refinedpolymorph              |0.1.0-1.20.1        |DONE      |Manifest: NOSIGNATURE
+		create_enchantment_industry-1.20.1-for-create-0.5.|Create Enchantment Industry   |create_enchantment_industry   |1.2.7.h             |DONE      |Manifest: NOSIGNATURE
+		sliceanddice-forge-3.2.0.jar                      |Create Slice & Dice           |sliceanddice                  |3.2.0               |DONE      |Manifest: NOSIGNATURE
+		createaddition-1.20.1-1.2.2.jar                   |Create Crafts & Additions     |createaddition                |1.20.1-1.2.2        |DONE      |Manifest: NOSIGNATURE
+		PresenceFootsteps-1.20.1-1.9.1-beta.1.jar         |Presence Footsteps (Forge)    |presencefootsteps             |1.20.1-1.9.1-beta.1 |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 42a5c293-9616-4e19-ab7f-76d000559160
+	FML: 47.2
+	Forge: net.minecraftforge:47.2.20
